@@ -1,0 +1,53 @@
+{
+  "template": "minecraft:heavy_core",
+  "item": true,
+  "properties": {
+    "hardness": 1.5,
+    "explosion_resistance": 1.5,
+    "sounds": "minecraft:stone",
+    "occludes": false
+  },
+  "state_properties": {
+    "facing": {
+      "type": "enum",
+      "values": [
+        "north",
+        "south",
+        "west",
+        "east"
+      ]
+    },
+    "part": {
+      "type": "enum",
+      "values": [
+        "foot",
+        "head"
+      ]
+    },
+    "open": {
+      "type": "boolean"
+    },
+    "locked": {
+      "type": "boolean"
+    },
+    "is_coffin": {
+      "type": "boolean"
+    }
+  },
+  "default_state": {
+    "facing": "north",
+    "part": "foot"
+  },
+  "shapes": {
+    "default": [
+      [
+        0.0625,
+        0.0625,
+        0.0625,
+        0.9375,
+        0.875,
+        0.9375
+      ]
+    ]
+  }
+}

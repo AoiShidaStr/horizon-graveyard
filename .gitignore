@@ -1,0 +1,4 @@
+.build/
+target/
+.freebuff-task.md
+__pycache__/

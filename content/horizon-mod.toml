@@ -1,0 +1,8 @@
+id = "graveyard"
+name = "The Graveyard"
+version = "0.1.0"
+description = "Graveyards, crypts and horror mobs (Ghoul, Revenant, Nightmare). A Horizon port of finallion's The Graveyard (GPL-3.0-only); replaces Born in Chaos on the Saison 2 server."
+authors = ["finallion", "Horizon port by the Saison 2 server"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

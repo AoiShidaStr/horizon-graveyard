@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:jigsaw",
+  "start_pool": "graveyard:medium_graveyard/start_pool",
+  "size": 1,
+  "max_distance_from_center": 80,
+  "biomes": "#graveyard:has_structure/medium_graveyard",
+  "step": "surface_structures",
+  "use_expansion_hack": true,
+  "start_height": {
+    "absolute": 0
+  },
+  "terrain_adaptation": "beard_box",
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+  "horizon:start_checks": {
+    "liquid": "top",
+    "terrain_radius": 2,
+    "terrain_range": 3
+  },
+  "spawn_overrides": {
+    "monster": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "graveyard:revenant",
+          "weight": 45,
+          "count": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 1,
+            "max_inclusive": 3
+          }
+        },
+        {
+          "type": "graveyard:ghoul",
+          "weight": 50,
+          "count": {
+            "type": "minecraft:uniform",
+            "min_inclusive": 2,
+            "max_inclusive": 4
+          }
+        }
+      ]
+    }
+  }
+}

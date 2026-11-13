@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "graveyard:gravestone",
+    "graveyard:cobblestone_gravestone",
+    "graveyard:deepslate_gravestone",
+    "graveyard:mossy_cobblestone_gravestone",
+    "#graveyard:corvid_bones"
+  ]
+}

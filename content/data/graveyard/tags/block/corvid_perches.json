@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:fences",
+    "#minecraft:walls",
+    "#minecraft:leaves",
+    "#graveyard:corvid_bones",
+    "graveyard:gravestone",
+    "graveyard:cobblestone_gravestone",
+    "graveyard:deepslate_gravestone",
+    "graveyard:mossy_cobblestone_gravestone"
+  ]
+}

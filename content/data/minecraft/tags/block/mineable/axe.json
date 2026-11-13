@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "graveyard:oak_coffin",
+    "graveyard:spruce_coffin",
+    "graveyard:birch_coffin",
+    "graveyard:acacia_coffin",
+    "graveyard:warped_coffin",
+    "graveyard:crimson_coffin"
+  ]
+}

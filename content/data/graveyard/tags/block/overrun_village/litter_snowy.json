@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:gravel",
+    "minecraft:diorite",
+    "minecraft:diorite_slab",
+    "minecraft:diorite_stairs",
+    "minecraft:spruce_slab",
+    "minecraft:blackstone"
+  ]
+}

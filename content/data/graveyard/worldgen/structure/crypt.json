@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:jigsaw",
+  "start_pool": "graveyard:crypt/start_pool",
+  "size": 6,
+  "max_distance_from_center": 80,
+  "biomes": "#graveyard:has_structure/crypt",
+  "step": "underground_structures",
+  "use_expansion_hack": false,
+  "start_height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+      "absolute": -40
+    },
+    "max_inclusive": {
+      "absolute": -10
+    }
+  },
+  "spawn_overrides": {}
+}

@@ -1,0 +1,34 @@
+{
+  "template": "minecraft:heavy_core",
+  "item": true,
+  "properties": {
+    "hardness": 1.0,
+    "explosion_resistance": 1.0,
+    "sounds": "minecraft:iron_block",
+    "occludes": false
+  },
+  "state_properties": {
+    "lit": {
+      "type": "boolean"
+    }
+  },
+  "shapes": {
+    "default": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.9375,
+        1.0,
+        0.9375
+      ]
+    ]
+  },
+  "state_light": {
+    "property": "lit",
+    "values": {
+      "false": 0,
+      "true": 11
+    }
+  }
+}

@@ -1,0 +1,13 @@
+[package]
+name = "mod-graveyard"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-only"
+
+[lib]
+name = "graveyard"
+path = "src/lib.rs"
+
+[dependencies]
+# The launcher points this at the Horizon source it builds the game from.
+horizon-client = { git = "https://github.com/horizon-rust/horizon", rev = "a85af177a82504f357ff10d5d40d0b7230e2ac32" }

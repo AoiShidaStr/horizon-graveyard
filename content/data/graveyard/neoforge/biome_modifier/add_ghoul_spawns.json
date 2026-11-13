@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#graveyard:ghoul_spawns",
+  "spawners": {
+    "type": "graveyard:ghoul",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 4
+  }
+}

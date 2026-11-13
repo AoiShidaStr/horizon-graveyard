@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "graveyard:creeper_skeleton",
+    "graveyard:hanged_skeleton",
+    "graveyard:laterally_lying_skeleton",
+    "graveyard:leaning_skeleton",
+    "graveyard:leaning_wither_skeleton",
+    "graveyard:lying_skeleton",
+    "graveyard:lying_wither_skeleton",
+    "graveyard:skeleton_hand",
+    "graveyard:wither_skeleton_hand",
+    "graveyard:skull_pile",
+    "graveyard:wither_skull_pile",
+    "graveyard:skull_with_rib_cage",
+    "graveyard:wither_skull_with_rib_cage",
+    "graveyard:torso_pile"
+  ]
+}

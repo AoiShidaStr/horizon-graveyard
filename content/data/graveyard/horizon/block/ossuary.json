@@ -1,0 +1,39 @@
+{
+  "template": "minecraft:heavy_core",
+  "item": true,
+  "properties": {
+    "hardness": 3.5,
+    "explosion_resistance": 3.5,
+    "sounds": "minecraft:bone_block",
+    "occludes": false
+  },
+  "state_properties": {
+    "facing": {
+      "type": "enum",
+      "values": [
+        "north",
+        "south",
+        "west",
+        "east"
+      ]
+    },
+    "open": {
+      "type": "boolean"
+    }
+  },
+  "default_state": {
+    "facing": "north"
+  },
+  "shapes": {
+    "default": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ]
+  }
+}

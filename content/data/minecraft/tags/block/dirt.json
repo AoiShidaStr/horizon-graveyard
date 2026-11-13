@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "graveyard:tg_rooted_dirt",
+    "graveyard:tg_dirt",
+    "graveyard:tg_coarse_dirt",
+    "minecraft:dirt",
+    "minecraft:coarse_dirt"
+  ]
+}

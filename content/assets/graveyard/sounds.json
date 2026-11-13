@@ -1,0 +1,98 @@
+{
+  "entity.ghoul.roar": {
+    "sounds": [
+      "graveyard:entity/ghoul/roar"
+    ],
+    "subtitle": "subtitles.entity.graveyard.ghoul.roar"
+  },
+  "entity.ghoul.ambient": {
+    "sounds": [
+      "minecraft:mob/husk/idle1",
+      "minecraft:mob/husk/idle2",
+      "minecraft:mob/husk/idle3"
+    ],
+    "subtitle": "subtitles.entity.graveyard.ghoul.ambient"
+  },
+  "entity.ghoul.hurt": {
+    "sounds": [
+      "minecraft:mob/husk/hurt1",
+      "minecraft:mob/husk/hurt2"
+    ],
+    "subtitle": "subtitles.entity.graveyard.ghoul.hurt"
+  },
+  "entity.ghoul.death": {
+    "sounds": [
+      "minecraft:mob/husk/death1",
+      "minecraft:mob/husk/death2"
+    ],
+    "subtitle": "subtitles.entity.graveyard.ghoul.death"
+  },
+  "entity.ghoul.step": {
+    "sounds": [
+      "minecraft:mob/husk/step1",
+      "minecraft:mob/husk/step2",
+      "minecraft:mob/husk/step3",
+      "minecraft:mob/husk/step4",
+      "minecraft:mob/husk/step5"
+    ],
+    "subtitle": "subtitles.entity.graveyard.ghoul.step"
+  },
+  "entity.revenant.ambient": {
+    "sounds": [
+      "minecraft:mob/wither_skeleton/idle1",
+      "minecraft:mob/wither_skeleton/idle2",
+      "minecraft:mob/wither_skeleton/idle3"
+    ],
+    "subtitle": "subtitles.entity.graveyard.revenant.ambient"
+  },
+  "entity.revenant.hurt": {
+    "sounds": [
+      "minecraft:mob/wither_skeleton/hurt1",
+      "minecraft:mob/wither_skeleton/hurt2",
+      "minecraft:mob/wither_skeleton/hurt3",
+      "minecraft:mob/wither_skeleton/hurt4"
+    ],
+    "subtitle": "subtitles.entity.graveyard.revenant.hurt"
+  },
+  "entity.revenant.death": {
+    "sounds": [
+      "minecraft:mob/wither_skeleton/death1",
+      "minecraft:mob/wither_skeleton/death2"
+    ],
+    "subtitle": "subtitles.entity.graveyard.revenant.death"
+  },
+  "entity.revenant.step": {
+    "sounds": [
+      "minecraft:mob/wither_skeleton/step1",
+      "minecraft:mob/wither_skeleton/step2",
+      "minecraft:mob/wither_skeleton/step3",
+      "minecraft:mob/wither_skeleton/step4"
+    ],
+    "subtitle": "subtitles.entity.graveyard.revenant.step"
+  },
+  "entity.nightmare.ambient": {
+    "sounds": [
+      "minecraft:mob/endermen/idle1",
+      "minecraft:mob/endermen/idle2",
+      "minecraft:mob/endermen/idle3",
+      "minecraft:mob/endermen/idle4",
+      "minecraft:mob/endermen/idle5"
+    ],
+    "subtitle": "subtitles.entity.graveyard.nightmare.ambient"
+  },
+  "entity.nightmare.hurt": {
+    "sounds": [
+      "minecraft:mob/endermen/hit1",
+      "minecraft:mob/endermen/hit2",
+      "minecraft:mob/endermen/hit3",
+      "minecraft:mob/endermen/hit4"
+    ],
+    "subtitle": "subtitles.entity.graveyard.nightmare.hurt"
+  },
+  "entity.nightmare.death": {
+    "sounds": [
+      "minecraft:mob/endermen/death"
+    ],
+    "subtitle": "subtitles.entity.graveyard.nightmare.death"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "template": "minecraft:heavy_core",
+  "item": false,
+  "properties": {
+    "hardness": 0.5,
+    "explosion_resistance": 0.5,
+    "sounds": "minecraft:white_wool",
+    "occludes": false
+  },
+  "state_properties": {
+    "facing": {
+      "type": "enum",
+      "values": [
+        "north",
+        "south",
+        "west",
+        "east"
+      ]
+    },
+    "variant": {
+      "type": "enum",
+      "values": [
+        "closed",
+        "open"
+      ]
+    }
+  },
+  "default_state": {
+    "facing": "north",
+    "variant": "closed"
+  },
+  "shapes": {
+    "default": [
+      [
+        0.1875,
+        0.0,
+        0.1875,
+        0.8125,
+        0.1875,
+        0.8125
+      ]
+    ]
+  },
+  "collision_shapes": {
+    "default": []
+  }
+}
