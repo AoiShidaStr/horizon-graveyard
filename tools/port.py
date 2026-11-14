@@ -636,6 +636,29 @@ def recipe_ok(recipe, registered):
     return True
 
 
+def carving_recipe(recipe, registered):
+    """Upstream's bone decor is carved from a bone block in its Ossuary (a
+    `graveyard:ossuary_carving` recipe, Java). The port has no Ossuary menu, so
+    each of those whose ingredient is a vanilla item becomes a shapeless
+    crafting recipe instead: one bone block for the decoration, as upstream's
+    carving yields."""
+    if recipe.get("type") != NS + ":ossuary_carving":
+        return None
+    ingredient = recipe.get("ingredient")
+    result = recipe.get("result")
+    if not isinstance(ingredient, str) or not isinstance(result, str):
+        return None
+    if not known_item(ingredient, registered) or not known_item(result, registered):
+        return None
+    if ingredient.startswith(NS + ":") or not result.startswith(NS + ":"):
+        return None
+    out = {"type": "minecraft:crafting_shapeless", "ingredients": [ingredient],
+           "result": {"id": result}}
+    if recipe.get("count", 1) != 1:
+        out["result"]["count"] = recipe["count"]
+    return out
+
+
 # --------------------------------------------------------------------------
 
 
@@ -707,14 +730,23 @@ def main():
         save(out_data("loot_table", "entities", mob + ".json"),
              clean_loot(load(os.path.join(loot, "entities", mob + ".json")), registered))
 
-    # Recipes in vanilla's types whose items all exist here.
+    # Recipes in vanilla's types whose items all exist here, and upstream's
+    # ossuary carvings brought over as crafting recipes (their ingredient is
+    # a vanilla item).
     kept = 0
+    carved = 0
     for f in sorted(os.listdir(up.data("recipe"))):
         r = load(up.data("recipe", f))
         if recipe_ok(r, registered):
             save(out_data("recipe", f), r)
             kept += 1
-    print(f"{kept} recipes kept, {len(chests)} chest loot tables")
+            continue
+        carving = carving_recipe(r, registered)
+        if carving is not None:
+            save(out_data("recipe", f.replace("_from_bone_carving", "_from_bone_block")
+                          .replace("_bone_carving", "_from_bone_block")), carving)
+            carved += 1
+    print(f"{kept} recipes kept, {carved} carvings, {len(chests)} chest loot tables")
 
     # Block and item tags, vanilla's and the mod's, cut to what exists.
     for base, ns in ((os.path.join(up.res, "data", "minecraft", "tags"), "minecraft"),

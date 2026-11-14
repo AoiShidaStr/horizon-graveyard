@@ -70,7 +70,10 @@ Ported:
   set pieces (no ritual). Their structure sets, pools, biome tags and spawners.
 - 74 blocks (the ones those structures place) on vanilla templates, with
   their models, textures, loot, recipes and a creative tab; 2 items
-  (corruption, dark iron ingot).
+  (corruption, dark iron ingot). The 14 bone decorations upstream carves in
+  its Ossuary (skull piles, lying and leaning skeletons, hands, rib cages)
+  are shapeless crafting recipes here, one bone block each: they were in the
+  creative tab but impossible to obtain in survival before.
 - The Ghoul (nine skins, climb out of the ground, rage roar after its first
   swing, run or crawl), the Revenant and the Nightmare (stare to anger it,
   blinds and teleports towards the player who stares at it, immune to
@@ -90,6 +93,9 @@ Known differences from upstream:
   ghoul can change skin between sessions.
 - Nightmare: upstream's random teleport in daylight and its loss of interest
   beyond 32 blocks are not ported.
+- The Ossuary's carving menu is not ported: its 14 `ossuary_carving` recipes
+  are kept as shapeless crafting recipes (one bone block for one decoration),
+  so the bone decor is craftable in survival without the menu's interface.
 - Dead mobs disappear after 20 ticks (Horizon), upstream keeps the body up to
   49; the death clip is played faster.
 - Sounds: the zombie template's sounds at our mobs are swapped for
