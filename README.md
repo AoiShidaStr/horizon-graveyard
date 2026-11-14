@@ -69,11 +69,13 @@ Ported:
   memorial_tree, mushroom_grave, giant_mushroom, and lich_prison and altar as
   set pieces (no ritual). Their structure sets, pools, biome tags and spawners.
 - 74 blocks (the ones those structures place) on vanilla templates, with
-  their models, textures, loot, recipes and a creative tab; 2 items
-  (corruption, dark iron ingot). The 14 bone decorations upstream carves in
-  its Ossuary (skull piles, lying and leaning skeletons, hands, rib cages)
-  are shapeless crafting recipes here, one bone block each: they were in the
-  creative tab but impossible to obtain in survival before.
+  their models, textures, loot and recipes; 2 items (corruption, dark iron
+  ingot). The creative tab contains blocks with survival sources; the four
+  unbreakable altar set-piece blocks are generated in structures instead.
+  The 12 graveyard ground variants are shapeless conversions from their
+  vanilla counterparts. The 14 bone decorations upstream carves in its
+  Ossuary (skull piles, lying and leaning skeletons, hands, rib cages) are
+  shapeless crafting recipes here, one bone block each.
 - The Ghoul (nine skins, climb out of the ground, rage roar after its first
   swing, run or crawl), the Revenant and the Nightmare (stare to anger it,
   blinds and teleports towards the player who stares at it, immune to

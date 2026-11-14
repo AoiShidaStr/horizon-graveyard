@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:rooted_dirt"
+  ],
+  "result": {
+    "id": "graveyard:tg_rooted_dirt"
+  }
+}

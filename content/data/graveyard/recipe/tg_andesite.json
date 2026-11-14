@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:andesite"
+  ],
+  "result": {
+    "id": "graveyard:tg_andesite"
+  }
+}

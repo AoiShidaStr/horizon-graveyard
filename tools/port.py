@@ -100,6 +100,27 @@ ITEMS = {
     "dark_iron_ingot": {"template": "minecraft:iron_ingot"},
 }
 
+# Palette blocks used as graveyard ground. Upstream has no recipes for these
+# because they are only placed by structures; shapeless conversions make the
+# decorative variants available in survival as well.
+TERRAIN_RECIPES = {
+    "tg_andesite": "minecraft:andesite",
+    "tg_coarse_dirt": "minecraft:coarse_dirt",
+    "tg_deepslate": "minecraft:deepslate",
+    "tg_diorite": "minecraft:diorite",
+    "tg_dirt": "minecraft:dirt",
+    "tg_granite": "minecraft:granite",
+    "tg_grass_block": "minecraft:grass_block",
+    "tg_moss_block": "minecraft:moss_block",
+    "tg_podzol": "minecraft:podzol",
+    "tg_rooted_dirt": "minecraft:rooted_dirt",
+    "tg_stone": "minecraft:stone",
+    "tg_tuff": "minecraft:tuff",
+}
+
+# The altar is generated as a set piece and is unbreakable in survival.
+WORLDGEN_ONLY_CREATIVE = {"altar", "altar_center", "altar_corner", "altar_side"}
+
 # The loader's convention biome tags the kept biome tags name. The game has no
 # loader, so the port brings them (approximations of NeoForge's Tags.Biomes).
 CONVENTION_BIOMES = {
@@ -699,7 +720,8 @@ def main():
          {"title": "itemGroup.graveyard.group",
           "icon": f"{NS}:gravestone" if "gravestone" in registered else f"{NS}:{blocks[0]}",
           "items": [f"{NS}:{n}" for n in blocks
-                    if os.path.exists(up.assets("items", n + ".json"))]
+                    if n not in WORLDGEN_ONLY_CREATIVE
+                    and os.path.exists(up.assets("items", n + ".json"))]
                    + [f"{NS}:{n}" for n in ITEMS]})
 
     # Atlas additions (two vanilla item sprites upstream's models reuse).
@@ -746,7 +768,12 @@ def main():
             save(out_data("recipe", f.replace("_from_bone_carving", "_from_bone_block")
                           .replace("_bone_carving", "_from_bone_block")), carving)
             carved += 1
-    print(f"{kept} recipes kept, {carved} carvings, {len(chests)} chest loot tables")
+    for block, ingredient in TERRAIN_RECIPES.items():
+        save(out_data("recipe", block + ".json"),
+             {"type": "minecraft:crafting_shapeless", "ingredients": [ingredient],
+              "result": {"id": f"{NS}:{block}"}})
+    print(f"{kept} recipes kept, {carved} carvings, {len(TERRAIN_RECIPES)} terrain recipes, "
+          f"{len(chests)} chest loot tables")
 
     # Block and item tags, vanilla's and the mod's, cut to what exists.
     for base, ns in ((os.path.join(up.res, "data", "minecraft", "tags"), "minecraft"),

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:deepslate"
+  ],
+  "result": {
+    "id": "graveyard:tg_deepslate"
+  }
+}
